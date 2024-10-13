@@ -1,24 +1,25 @@
-import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Nav from "./Nav";
+import React, { useContext, useEffect, useState } from "react";
 import { ProductContext } from "../utils/Context";
-import axios from "axios";
+import axios from "../utils/axios";
 
 const Home = () => {
   const [product] = useContext(ProductContext);
   const { search } = useLocation();
-  const category = decodeURIComponent(search.split("=")[1]);
-
   const [filteredproducts, setfilteredproducts] = useState(null);
+  const category = decodeURIComponent(search.split("=")[1]);
 
   const getproductCategory = async () => {
     try {
       const { data } = await axios.get(`/products/category/${category}`);
       setfilteredproducts(data);
+      console.log(setfilteredproducts);
     } catch (error) {
       console.log(error);
     }
   };
+  
 
   useEffect(() => {
     if (!filteredproducts) setfilteredproducts(product);
@@ -30,8 +31,7 @@ const Home = () => {
       <Nav />
 
       <div className="relative ml-72 gap-5 w-[82vw] flex flex-wrap py-10">
-        {filteredproducts &&
-          filteredproducts.map((items, index) => (
+        {filteredproducts && filteredproducts.map((items, index) => (
             <Link
               key={items.id}
               to={`/product/${items.id}`}
