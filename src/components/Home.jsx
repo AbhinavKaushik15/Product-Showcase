@@ -3,6 +3,7 @@ import Nav from "./Nav";
 import React, { useContext, useEffect, useState } from "react";
 import { ProductContext } from "../utils/Context";
 import axios from "../utils/axios";
+import Loading from "./Loading";
 
 const Home = () => {
   const [product] = useContext(ProductContext);
@@ -44,7 +45,7 @@ const Home = () => {
       </div>
     </>
   ) : (
-    <h1>Loading...</h1>
+    <Loading />
   );
 };
 

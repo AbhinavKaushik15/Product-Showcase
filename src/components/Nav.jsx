@@ -12,8 +12,8 @@ const Nav = () => {
   return (
     <div className="w-[18vw] h-screen bg-blue-300 flex flex-col items-center fixed top-0 left-0">
       <Link
-        className="text-blue-500 border-[2px] border-blue-500 h-fit px-4 py-2 bg-white font-[500] shadow mt-5"
-        to="/"
+        className="text-blue-500 hover:text-white border-[2px] border-blue-500 hover:bg-blue-500 h-fit px-4 py-2 bg-white font-[500] shadow mt-5"
+        to="/create"
       >
         Add to Product
       </Link>

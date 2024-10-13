@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ProductContext } from '../utils/Context';
+import Loading from './Loading';
 
 const Products = () => {
   const {id} = useParams();
@@ -29,7 +30,7 @@ const Products = () => {
         </div>
       </div>
     </div>
-  ) : <h1>Loading...</h1>
+  ) : <Loading />
 }
 
 export default Products;
