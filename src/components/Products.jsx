@@ -9,7 +9,7 @@ const Products = () => {
 
   return product ? (
     <div className='md:w-[50%] w-[80%] min-h-screen mx-auto flex justify-center items-center gap-20 px-20 py-5'>
-      <Link className='fixed top-10 left-40 font-[500] text-blue-400 border-blue-400 border-[1.3px] py-1 px-5 hover:bg-blue-400 hover:text-white' to="/">Home</Link>
+      <Link className='fixed top-3 left-64 font-[500] text-blue-400 border-blue-400 border-[1.3px] py-1 px-5 hover:bg-blue-400 hover:text-white' to="/">Home</Link>
       
       <img className='w-52 h-72 object-contain' src={prod.image} alt="" />
 

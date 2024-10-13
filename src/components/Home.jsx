@@ -22,7 +22,7 @@ const Home = () => {
   
 
   useEffect(() => {
-    if (!filteredproducts) setfilteredproducts(product);
+    if (!filteredproducts || category == "undefined") setfilteredproducts(product);
     if (category != "undefined") getproductCategory();
   }, [category, product]);
 
@@ -30,7 +30,7 @@ const Home = () => {
     <>
       <Nav />
 
-      <div className="relative ml-72 gap-5 w-[82vw] flex flex-wrap py-10">
+      <div className="relative ml-72 gap-5 w-[82vw] flex flex-wrap py-14">
         {filteredproducts && filteredproducts.map((items, index) => (
             <Link
               key={items.id}
