@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { ProductContext } from "../utils/Context";
 
 const Nav = () => {
@@ -19,16 +19,16 @@ const Nav = () => {
       </Link>
 
       <h1 className="text-2xl font-[500] text-white mt-6">Filter Products</h1>
-      <div className="text-white flex flex-col mt-5">
+      <div className="text-white flex flex-col gap-3 mt-5">
         {distinct_category.map((c, i) => {
           return (
-            <Link
+            <NavLink
               key={i}
               to={`/?catogery=${c}`}
-              className="hover:text-zinc-500"
+              className="hover:text-blue-600"
             >
-              {c}
-            </Link>
+              {c.toUpperCase()}
+            </NavLink>
           );
         })}
       </div>

@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { ProductContext } from "../utils/Context";
+import {nanoid} from "nanoid";
 
 const Create = () => {
+  const [product, setproduct] = useContext(ProductContext);
+
   const [image, setimage] = useState("");
   const [title, settitle] = useState("");
   const [price, setprice] = useState("");
@@ -11,23 +15,25 @@ const Create = () => {
     e.preventDefault();
 
     if (
-      image.trim().length > 12 ||
-      title.trim().length > 5 ||
-      price.trim().length > 2 ||
-      category.trim.length > 5 ||
-      description.trim().length > 5
+      image.trim().length < 5 ||
+      title.trim().length < 5 ||
+      price.trim().length < 1 ||
+      category.trim().length < 5 ||
+      description.trim().length < 5
     ) {
-      alert("Please fill the all fields");
+      alert("Each and every inputmust have atleast 4 characters");
+      return;
     }
 
-    const product = {
+    const prod = {
+      id: nanoid(),
       image,
       title,
       price,
       category,
-      description
-    };
-    console.log(product);
+      description,
+    }
+    setproduct([...product, prod]);
   };
 
   return (
@@ -81,7 +87,7 @@ const Create = () => {
           ></textarea>
 
           <input
-            className="text-lg border-[1.5px] w-fit py-1 px-3 font-[500] text-green-400 border-green-400 hover:bg-green-400 hover:text-white mx-auto"
+            className="text-lg border-[1.5px] w-fit py-1 px-3 font-[500] text-green-400 border-green-400 hover:bg-green-400 hover:text-white mx-auto rounded-full"
             type="submit"
           />
         </form>
