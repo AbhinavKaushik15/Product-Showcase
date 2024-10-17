@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { ProductContext } from "../utils/Context";
 import {nanoid} from "nanoid";
+import { useNavigate } from "react-router-dom";
 
 const Create = () => {
+  const navigate = useNavigate();
   const [product, setproduct] = useContext(ProductContext);
-
   const [image, setimage] = useState("");
   const [title, settitle] = useState("");
   const [price, setprice] = useState("");
@@ -34,6 +35,8 @@ const Create = () => {
       description,
     }
     setproduct([...product, prod]);
+    localStorage.setItem("product", JSON.stringify([...product, prod]));
+    navigate("/");
   };
 
   return (

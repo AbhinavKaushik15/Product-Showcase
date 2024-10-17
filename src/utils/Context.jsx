@@ -3,20 +3,20 @@ import React, { createContext, useEffect, useState } from "react";
 export const ProductContext = createContext(null);
 
 const Context = (props) => {
-  const [product, setproduct] = useState(null);
+  const [product, setproduct] = useState(JSON.parse(localStorage.getItem("product")) || null);
 
-  const getProduct = async () => {
-    try {
-      const { data } = await axios.get(`/products`);
-      setproduct(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const getProduct = async () => {
+  //   try {
+  //     const { data } = await axios.get(`/products`);
+  //     setproduct(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    getProduct();
-  }, []);
+  // useEffect(() => {
+  //   getProduct();
+  // }, []);
 
   return (
     <ProductContext.Provider value={[product, setproduct]}>
