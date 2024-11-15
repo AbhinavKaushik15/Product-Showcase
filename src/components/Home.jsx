@@ -45,7 +45,7 @@ const Home = () => {
             <Link
               key={items.id}
               to={`/product/${items.id}`}
-              className="max-w-[15vw] sm:w-[17vw] h-[22vw] bg-white shadow-2xl flex flex-col items-center justify-center gap-5 p-5 hover:text-blue-800 hover:scale-105 rounded-xl hover:transition-all"
+              className="max-w-[15vw] sm:w-[17vw] h-[22vw] bg-white shadow-xl flex flex-col items-center justify-center gap-5 p-5 hover:text-blue-800 hover:scale-105 rounded-xl hover:transition-all"
             >
               <img className="w-[50%] sm:w-[70%]" src={items.image} alt="" />
               <h1 className="text-[1.2vw] sm:text-sm text-center font-[500]">

@@ -26,7 +26,7 @@ const Products = () => {
   };
 
   return productSave && (
-    <div className="w-full min-h-screen flex items-center justify-center gap-[7vw]">
+    <div className="w-full min-h-screen flex items-center justify-center gap-[7vw] py-10">
       <Link
         className="absolute top-5 z-[90] left-[17vw] text-blue-700 border-blue-700 border-[0.145vw] py-[0.4vw] px-[1vw] font-[500] text-[1.5vw] hover:bg-blue-700 hover:text-white"
         to="/"
