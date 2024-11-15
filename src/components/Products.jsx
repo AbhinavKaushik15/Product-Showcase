@@ -45,7 +45,7 @@ const Products = () => {
         <h1 className="text-[2.6vw] w-full font-[700] leading-[1.2]">
           {productSave.title}
         </h1>
-        <p className="text-zinc-500 w-full text-[1.7vw]">
+        <p className="text-zinc-400 w-full text-[1.7vw]">
           {productSave.category}
         </p>
         <h1 className="text-[2.4vw] font-[500] text-red-500 ">
