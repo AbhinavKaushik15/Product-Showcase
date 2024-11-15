@@ -1,12 +1,11 @@
 import React from "react";
-import { Link, Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Products from "./components/Products";
 import Home from "./components/Home";
 import Create from "./components/Create";
 import Edit from "./components/Edit";
 
 const App = () => {
-
   return (
     <div className="w-full text-black overflow-hidden">
       <Routes>
