@@ -22,7 +22,7 @@ const Products = () => {
     setproduct(filteredProduct);
     localStorage.setItem("product", JSON.stringify(filteredProduct));
     toast.success("Product deleted successfully");
-    navigate("/");
+    navigate("/edit");
   };
 
   return productSave && (
