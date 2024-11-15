@@ -19,13 +19,13 @@ const Nav = () => {
       </Link>
 
       <h1 className="text-xl sm:text-[21.5px] font-[700] transition-all text-white mt-6">Filter Products</h1>
-      <div className="text-white flex flex-col gap-3 mt-5">
+      <div className="text-white flex flex-col gap- mt-5">
         {distinct_category.map((c, i) => {
           return (
             <NavLink
               key={i}
               to={`/?catogery=${c}`}
-              className="hover:text-blue-600 transition-all text-sm sm:text-[16px]"
+              className="hover:text-white text-zinc-200 whitespace-nowrap transition-all hover:bg-blue-600 py-3 px-3 rounded-md text-[12px] sm:text-[16px]"
             >
               {c.toUpperCase()}
             </NavLink>

@@ -26,7 +26,13 @@ const Products = () => {
   };
 
   return productSave ? (
-    <div className="w-full h-[90vh] flex items-center justify-center gap-[7vw]">
+    <div className="w-full min-h-screen flex items-center justify-center gap-[7vw]">
+      <Link
+        className="absolute top-5 z-[90] left-[17vw] text-blue-400 border-blue-400 border-[0.145vw] py-[0.4vw] px-[1vw] font-[500] text-[1.5vw] hover:bg-blue-400 hover:text-white"
+        to="/"
+      >
+        Home
+      </Link>
       <div className="w-[20vw] h-[28vw]">
         <img
           className="w-full h-full object-contain"
@@ -36,12 +42,18 @@ const Products = () => {
       </div>
 
       <div className="w-[35%] flex flex-col gap-[1.5vw]">
-        <h1 className="text-[2.6vw] w-full font-[700] leading-[1.2]">{productSave.title}</h1>
-        <p className="text-zinc-500 w-full text-[1.7vw]">{productSave.category}</p>
+        <h1 className="text-[2.6vw] w-full font-[700] leading-[1.2]">
+          {productSave.title}
+        </h1>
+        <p className="text-zinc-500 w-full text-[1.7vw]">
+          {productSave.category}
+        </p>
         <h1 className="text-[2.4vw] font-[400] text-red-300 ">
           € {productSave.price}
         </h1>
-        <h1 className="text-[1.3vw] text-zinc-700 sm:text-[2.5vh] w-[32vw]">{productSave.description}</h1>
+        <h1 className="text-[1.3vw] text-zinc-700 sm:text-[2.5vh] w-[32vw]">
+          {productSave.description}
+        </h1>
 
         <div className="flex items-center gap-10">
           <Link

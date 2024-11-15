@@ -6,8 +6,8 @@ import axios from "../utils/axios";
 import Loading from "./Loading";
 
 const Home = () => {
+  const { search, pathname } = useLocation();
   const [product] = useContext(ProductContext);
-  const { search } = useLocation();
   const [filteredproducts, setfilteredproducts] = useState(null);
   const category = decodeURIComponent(search.split("=")[1]);
 
@@ -31,7 +31,14 @@ const Home = () => {
   return product ? (
     <div className="w-full">
       <Nav />
-
+      {(pathname != "/" || search.length > 0) && (
+        <Link
+          className="relative top-5 z-[90] left-[200px] xl:left-[17vw] text-blue-400 border-blue-400 border-[0.145vw] py-[0.4vw] px-[1vw] font-[500] text-[1.5vw] hover:bg-blue-400 hover:text-white"
+          to="/"
+        >
+          Home
+        </Link>
+      )}
       <div className="relative ml-[170px] sm:ml-[202px] py-7 gap-4 flex items-center justify-center flex-wrap">
         {filteredproducts &&
           filteredproducts.map((items, index) => (

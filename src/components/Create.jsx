@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ProductContext } from "../utils/Context";
-import {nanoid} from "nanoid";
-import { useNavigate } from "react-router-dom";
+import { nanoid } from "nanoid";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Create = () => {
@@ -34,7 +34,7 @@ const Create = () => {
       price,
       category,
       description,
-    }
+    };
     setproduct([...product, prod]);
     localStorage.setItem("product", JSON.stringify([...product, prod]));
     toast.success("Product added successfully");
@@ -42,8 +42,13 @@ const Create = () => {
   };
 
   return (
-    <div>
       <div className="min-h-screen w-full flex flex-col items-center py-8">
+        <Link
+          className="absolute top-5 z-[90] left-[17vw] text-blue-400 border-blue-400 border-[0.145vw] py-[0.4vw] px-[1vw] font-[500] text-[1.5vw] hover:bg-blue-400 hover:text-white"
+          to="/"
+        >
+          Home
+        </Link>
         <h1 className="text-3xl font-[600] mb-8">Add Product</h1>
         <form
           onSubmit={AddProductHandler}
@@ -97,7 +102,6 @@ const Create = () => {
           />
         </form>
       </div>
-    </div>
   );
 };
 
