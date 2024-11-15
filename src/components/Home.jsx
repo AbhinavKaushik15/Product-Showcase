@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import Nav from "./Nav";
 import React, { useContext, useEffect, useState } from "react";
 import { ProductContext } from "../utils/Context";
-// import axios from "../utils/axios";
+import axios from "../utils/axios";
 import Loading from "./Loading";
 
 const Home = () => {
