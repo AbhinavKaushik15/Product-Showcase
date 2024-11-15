@@ -33,7 +33,7 @@ const Home = () => {
       <Nav />
       {(pathname != "/" || search.length > 0) && (
         <Link
-          className="relative top-5 z-[90] left-[200px] xl:left-[17vw] text-blue-400 border-blue-400 border-[0.145vw] py-[0.4vw] px-[1vw] font-[500] text-[1.5vw] hover:bg-blue-400 hover:text-white"
+          className="relative top-5 z-[90] left-[200px] xl:left-[17vw] text-blue-700 border-blue-700 border-[0.145vw] py-[0.4vw] px-[1vw] font-[500] text-[1.5vw] hover:bg-blue-700 hover:text-white"
           to="/"
         >
           Home

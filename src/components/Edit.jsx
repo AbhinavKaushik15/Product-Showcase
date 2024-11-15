@@ -52,7 +52,7 @@ const Edit = () => {
   return (
     <div className="container mx-auto">
       <div className="min-h-screen w-full flex flex-col items-center py-8">
-        <button onClick={()=>backHandler()} className="absolute top-5 z-[90] left-[17vw] text-blue-400 border-blue-400 border-[0.145vw] py-[0.4vw] px-[1.5vw] font-[500] text-[1.5vw] hover:bg-blue-400 hover:text-white">
+        <button onClick={()=>backHandler()} className="absolute top-5 z-[90] left-[17vw] text-blue-700 border-blue-700 border-[0.145vw] py-[0.4vw] px-[1.5vw] font-[500] text-[1.5vw] hover:bg-blue-700 hover:text-white">
           Back
         </button>
         <h1 className="text-3xl font-[600] mb-10">Edit Product</h1>

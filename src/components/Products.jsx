@@ -28,7 +28,7 @@ const Products = () => {
   return productSave && (
     <div className="w-full min-h-screen flex items-center justify-center gap-[7vw]">
       <Link
-        className="absolute top-5 z-[90] left-[17vw] text-blue-400 border-blue-400 border-[0.145vw] py-[0.4vw] px-[1vw] font-[500] text-[1.5vw] hover:bg-blue-400 hover:text-white"
+        className="absolute top-5 z-[90] left-[17vw] text-blue-700 border-blue-700 border-[0.145vw] py-[0.4vw] px-[1vw] font-[500] text-[1.5vw] hover:bg-blue-700 hover:text-white"
         to="/"
       >
         Home
@@ -48,7 +48,7 @@ const Products = () => {
         <p className="text-zinc-500 w-full text-[1.7vw]">
           {productSave.category}
         </p>
-        <h1 className="text-[2.4vw] font-[400] text-red-300 ">
+        <h1 className="text-[2.4vw] font-[500] text-red-500 ">
           € {productSave.price}
         </h1>
         <h1 className="text-[1.3vw] text-zinc-700 sm:text-[2.5vh] w-[32vw]">
@@ -58,13 +58,13 @@ const Products = () => {
         <div className="flex items-center gap-10">
           <Link
             to={`/edit/${productSave.id}`}
-            className="text-blue-400 border-[0.145vw] border-blue-400 py-[0.4vw] px-[1.8vw] font-[500] text-[1.5vw] transition-all hover:bg-blue-400 hover:text-white"
+            className="text-blue-400 border-[0.145vw] border-blue-400 py-[0.4vw] px-[1.8vw] font-[500] text-[1.5vw] rounded-full transition-all hover:bg-blue-400 hover:text-white"
           >
             Edit
           </Link>
           <button
             onClick={() => ProductDeleteHandler(productSave.id)}
-            className="text-red-400 border-[0.145vw] border-red-400 transition-all hover:bg-red-400 hover:text-white py-[0.4vw] px-[1vw] font-[500] text-[1.5vw]"
+            className="text-red-400 border-[0.145vw] border-red-400 transition-all hover:bg-red-400 hover:text-white rounded-full py-[0.4vw] px-[1vw] font-[500] text-[1.5vw]"
           >
             Delete
           </button>
