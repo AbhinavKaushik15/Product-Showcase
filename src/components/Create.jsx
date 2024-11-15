@@ -44,15 +44,15 @@ const Create = () => {
   return (
     <div>
       <div className="min-h-screen w-full flex flex-col items-center py-8">
-        <h1 className="text-3xl font-[600] mb-10 underline">Add Product</h1>
+        <h1 className="text-3xl font-[600] mb-8">Add Product</h1>
         <form
           onSubmit={AddProductHandler}
-          className="flex flex-col gap-5 w-1/2"
+          className="flex flex-col gap-3 w-1/2"
         >
           <input
             onChange={(e) => setimage(e.target.value)}
             value={image}
-            className="outline-none py-3 px-5 rounded-full bg-zinc-200"
+            className="outline-none py-3 px-5 rounded-full bg-zinc-100 hover:bg-zinc-200"
             type="url"
             placeholder="Product Image"
           />
@@ -60,16 +60,16 @@ const Create = () => {
           <input
             onChange={(e) => settitle(e.target.value)}
             value={title}
-            className="outline-none py-3 px-5 rounded-full bg-zinc-200"
+            className="outline-none py-3 px-5 rounded-full bg-zinc-100 hover:bg-zinc-200"
             type="text"
             placeholder="Title"
           />
 
-          <div className="flex items-center gap-3">
+          <div className="flex-col sm:flex-row flex items-center gap-3">
             <input
               onChange={(e) => setprice(e.target.value)}
               value={price}
-              className="outline-none py-3 px-5 rounded-full bg-zinc-200 w-full"
+              className="outline-none py-3 px-5 rounded-full bg-zinc-100 hover:bg-zinc-200 w-full"
               type="number"
               placeholder="Price"
             />
@@ -77,7 +77,7 @@ const Create = () => {
             <input
               onChange={(e) => setcategory(e.target.value)}
               value={category}
-              className="outline-none py-3 px-5 rounded-full bg-zinc-200 w-full"
+              className="outline-none py-3 px-5 rounded-full bg-zinc-100 hover:bg-zinc-200 w-full"
               type="text"
               placeholder="Category"
             />
@@ -86,7 +86,7 @@ const Create = () => {
           <textarea
             onChange={(e) => setdescription(e.target.value)}
             value={description}
-            className="max-h-36 outline-none py-3 px-5 rounded-xl bg-zinc-200"
+            className="max-h-36 outline-none py-3 px-5 rounded-xl bg-zinc-100 hover:bg-zinc-200"
             rows="5"
             placeholder="Product Description..."
           ></textarea>

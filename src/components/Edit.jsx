@@ -46,18 +46,18 @@ const Edit = () => {
   };
 
   return (
-    <div>
+    <div className="container mx-auto">
       <div className="min-h-screen w-full flex flex-col items-center py-8">
-        <h1 className="text-3xl font-[600] mb-10 underline">Edit Product</h1>
+        <h1 className="text-3xl font-[600] mb-10">Edit Product</h1>
         <form
           onSubmit={AddProductHandler}
-          className="flex flex-col gap-5 w-1/2"
+          className="flex flex-col gap-3 w-1/2"
         >
           <input
             name="image"
             onChange={ChangeHandler}
             value={productDetsShow && productDetsShow.image}
-            className="outline-none py-3 px-5 rounded-full bg-zinc-200"
+            className="outline-none py-3 px-5 rounded-full bg-zinc-100 hover:bg-zinc-200"
             type="url"
             placeholder="Product Image"
           />
@@ -66,17 +66,17 @@ const Edit = () => {
             name="title"
             onChange={ChangeHandler}
             value={productDetsShow && productDetsShow.title}
-            className="outline-none py-3 px-5 rounded-full bg-zinc-200"
+            className="outline-none py-3 px-5 rounded-full bg-zinc-100 hover:bg-zinc-200"
             type="text"
             placeholder="Title"
           />
 
-          <div className="flex items-center gap-3">
+          <div className="flex-col flex sm:flex-row items-center gap-3">
             <input
               name="price"
               onChange={ChangeHandler}
               value={productDetsShow && productDetsShow.price}
-              className="outline-none py-3 px-5 rounded-full bg-zinc-200 w-full"
+              className="outline-none py-3 px-5 rounded-full bg-zinc-100 hover:bg-zinc-200 w-full"
               type="number"
               placeholder="Price"
             />
@@ -85,7 +85,7 @@ const Edit = () => {
               name="category"
               onChange={ChangeHandler}
               value={productDetsShow && productDetsShow.category}
-              className="outline-none py-3 px-5 rounded-full bg-zinc-200 w-full"
+              className="outline-none py-3 px-5 rounded-full bg-zinc-100 hover:bg-zinc-200 w-full"
               type="text"
               placeholder="Category"
             />
@@ -95,7 +95,7 @@ const Edit = () => {
             name="description"
             onChange={ChangeHandler}
             value={productDetsShow && productDetsShow.description}
-            className="max-h-36 outline-none py-3 px-5 rounded-xl bg-zinc-200"
+            className="max-h-36 outline-none py-3 px-5 rounded-xl bg-zinc-100 hover:bg-zinc-200"
             rows="5"
             placeholder="Product Description..."
           ></textarea>

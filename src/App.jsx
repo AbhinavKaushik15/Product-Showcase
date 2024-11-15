@@ -9,10 +9,10 @@ const App = () => {
   const {search, pathname} = useLocation();  
 
   return (
-    <div className="w-full min-h-screen text-black overflow-hidden">
+    <div className="w-full text-black overflow-hidden">
       {(pathname != "/" || search.length > 0) && (
         <Link
-        className="fixed top-3 z-[90] left-64 font-[500] text-blue-400 border-blue-400 border-[1.3px] py-1 px-5 hover:bg-blue-400 hover:text-white"
+        className="relative top-5 z-[90] left-[17vw] text-blue-400 border-blue-400 border-[0.145vw] py-[0.4vw] px-[1vw] font-[500] text-[1.5vw] hover:bg-blue-400 hover:text-white"
         to="/"
       >
         Home
