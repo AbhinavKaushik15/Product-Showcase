@@ -25,7 +25,7 @@ const Products = () => {
     navigate("/");
   };
 
-  return productSave ? (
+  return productSave && (
     <div className="w-full min-h-screen flex items-center justify-center gap-[7vw]">
       <Link
         className="absolute top-5 z-[90] left-[17vw] text-blue-400 border-blue-400 border-[0.145vw] py-[0.4vw] px-[1vw] font-[500] text-[1.5vw] hover:bg-blue-400 hover:text-white"
@@ -71,9 +71,7 @@ const Products = () => {
         </div>
       </div>
     </div>
-  ) : (
-    <Loading />
-  );
+  )
 };
 
 export default Products;

@@ -28,7 +28,7 @@ const Home = () => {
       setfilteredproducts(product.filter((p) => p.category == category));
   }, [category, product]);
 
-  return product ? (
+  return product && (
     <div className="w-full">
       <Nav />
       {(pathname != "/" || search.length > 0) && (
@@ -55,9 +55,7 @@ const Home = () => {
           ))}
       </div>
     </div>
-  ) : (
-    <Loading />
-  );
+  )
 };
 
 export default Home;
