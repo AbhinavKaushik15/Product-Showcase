@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ProductContext } from "../utils/Context";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Edit = () => {
   const { id } = useParams();
@@ -42,6 +43,7 @@ const Edit = () => {
 
     setproduct(copyData);
     localStorage.setItem("product", JSON.stringify(copyData));
+    toast.success("Edited successfully");
     navigate("/");
   };
 
